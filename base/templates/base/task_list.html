@@ -35,3 +35,11 @@
         <h3>No items in list</h3>
     {% endfor %}
 </table>
+
+{% block scripts %}
+<!-- <script>
+    const data = '{{tasks_json}}'
+    cleanData = JSON.parse(data.replace(/&quot;/g, '"'))
+    console.log(cleanData)
+</script> -->
+{% endblock scripts %}
