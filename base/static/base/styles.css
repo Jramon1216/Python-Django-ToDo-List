@@ -13,6 +13,7 @@ h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
 }
 
 .container {
+    background-color: #fff;
     max-width: 550px;
     margin: auto; 
     box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
@@ -20,10 +21,39 @@ h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
 }
 
 .header-div {
-    /* display: flex; */
     justify-content: space-between;
     color: #fff;
     padding: 10px;
     border-radius: 5px 5px 0 0;
     background: linear-gradient(#EEA390 0%, #EB796F 43%, #EB796F 100%);
 }
+
+.welcome-msg {
+    margin: auto;
+}
+
+.task-count {
+    margin: 0px;
+}
+
+.logout-div {
+    position: absolute;
+    right: 400px;
+    left: 828px;
+    top: 100px;
+    bottom: 800px;
+}
+ 
+button {
+    border: none; 
+    text-decoration: none;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+button:hover{
+    cursor: pointer;
+    
+ }

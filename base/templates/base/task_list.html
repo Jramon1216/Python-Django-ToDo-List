@@ -1,11 +1,11 @@
 {% extends 'base/main.html' %}
 {% block content %}
 <div class="header-div">
-    <h1>Welcome, {{request.user|title}}!</h1>
-    <h3 style="margin:0"> You have <i>{{count}}</i> incomplete task{{ count|pluralize:"s" }}</h3>
+    <h1 class="welcome-msg">Welcome, {{request.user|title}}!</h1>
+    <h3 class="task-count"> You have <i>{{count}}</i> incomplete task{{ count|pluralize:"s" }}</h3>
     <div>
         {% if request.user.is_authenticated %}
-        <form method="POST" action="{% url 'logout' %}">
+        <form method="POST" action="{% url 'logout' %}" class="logout-div">
             {% csrf_token %}
             <button type="submit">Logout</button>
         </form>
