@@ -3,13 +3,12 @@
 <div class="header-div">
     <h1 class="welcome-msg">Welcome, {{request.user|title}}!</h1>
     <h3 class="task-count"> You have <i>{{count}}</i> incomplete task{{ count|pluralize:"s" }}</h3>
-    <div>
+    <div class="logout">
         {% if request.user.is_authenticated %}
-        <form method="POST" action="{% url 'logout' %}" class="logout-div">
+        <form method="POST" action="{% url 'logout' %}">
             {% csrf_token %}
             <button type="submit">Logout</button>
         </form>
-        
         {% else %}
         <a href="{% url 'login' %}">Login</a>
         {% endif %}

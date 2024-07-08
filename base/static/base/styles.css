@@ -29,21 +29,15 @@ h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
 }
 
 .welcome-msg {
-    margin: auto;
+    margin: 0;    
+    width:290px;
 }
 
 .task-count {
     margin: 0px;
+    width: 256px;
 }
 
-.logout-div {
-    position: absolute;
-    right: 400px;
-    left: 828px;
-    top: 100px;
-    bottom: 800px;
-}
- 
 button {
     border: none; 
     text-decoration: none;
@@ -54,6 +48,9 @@ button {
 }
 
 button:hover{
-    cursor: pointer;
-    
+    cursor: pointer;  
  }
+
+/* .logout {
+    float: inline-end;
+} */
