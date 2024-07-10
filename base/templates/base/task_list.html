@@ -1,4 +1,6 @@
-{% extends 'base/main.html' %} {% block content %}
+{% extends 'base/main.html' %} 
+
+{% block content %}
 
 <!-- HEADER -->
 <div class="header-div">
@@ -39,23 +41,29 @@
   {% for task in tasks %}
   <div class="task-wrapper">
     {% if task.complete %}
+    
     <div class="task-title">
-      <div class="fa-solid fa-check"></div>
+      <i class="fa-solid fa-circle-check"></i>
       <i><s><a href="{% url 'task-update' task.id %}">{{task}}</a></s></i>
     </div>
     <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
+    
     {% else %}
+    
     <div class="task-title">
       <div class=""></div>
       <a href="{% url 'task-update' task.id %}">{{task}}</a>
     </div>
     <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
+    
     {%endif%}
   </div>
   {% endfor %}
 </div>
 
-{% endblock content %} {% block scripts %}
+{% endblock content %} 
+
+{% block scripts %}
 <!-- <script>
     const data = '{{tasks_json}}'
     cleanData = JSON.parse(data.replace(/&quot;/g, '"'))
