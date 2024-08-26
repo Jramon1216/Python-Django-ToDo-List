@@ -28,6 +28,11 @@ h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
     background: linear-gradient(#EEA390 0%, #EB796F 43%, #EB796F 100%);
 }
 
+.header-div a {
+    color: rgb(247, 247, 247);
+    text-decoration: none;
+}
+
 .welcome-msg {
     margin: 0;    
     width:290px;
@@ -127,4 +132,8 @@ label{
 ::placeholder {
     font-weight: 300;
     opacity: 0.5;
+}
+
+.card-body {
+    padding: 20px;
 }
