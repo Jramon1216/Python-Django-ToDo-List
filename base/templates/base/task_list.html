@@ -23,25 +23,29 @@
 
 <!-- TASK LIST -->
 
-<a href="{% url 'task-create' %}">Add Task</a>
-
-<!-- TASK SEARCH -->
-<form method="GET">
-  <input
+<div id="search-add-wrapper">
+  <!-- TASK SEARCH -->
+  <form class="search-form" method="GET" style="margin-top: 5px; display: flex;">
+    <input
     type="text"
     name="search-area"
     value="{{search_input}}"
     placeholder="Search Tasks..."
-  />
-  <input type="submit" value="Search" />
-</form>
+    />
+    <input class="button" type="submit" value="Search" />
+  </form>
+  {% if tasks|length > 0 %}
+    <a class="fa-light fa-plus" id="add-link" href="{% url 'task-create' %}"></a>
+  {% endif %}
+</div>
+
 
 <!-- TASKS -->
 <div class="task-items-wrapper">
   {% for task in tasks %}
   <div class="task-wrapper">
     {% if task.complete %}
-    
+
     <div class="task-title">
       <i class="fa-solid fa-circle-check"></i>
       <i><s><a href="{% url 'task-update' task.id %}">{{task}}</a></s></i>
@@ -51,7 +55,7 @@
     {% else %}
     
     <div class="task-title">
-      <div class=""></div>
+      <div class="fa-regular fa-circle"></div>
       <a href="{% url 'task-update' task.id %}">{{task}}</a>
     </div>
     <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
