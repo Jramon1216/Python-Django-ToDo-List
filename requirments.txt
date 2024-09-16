@@ -1,3 +1,0 @@
-django-livereload
-python-decouple
-fontawesomefree
