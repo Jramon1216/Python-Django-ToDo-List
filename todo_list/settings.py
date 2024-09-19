@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',    
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -147,13 +148,21 @@ AWS_S3_FILE_OVERWRITE = config('AWS_S3_FILE_OVERWRITE', cast=bool)
 
 STORAGES = {
 
+    # AWS S3 STATIC FILE CONFIG
+    
     # Media file (image) management
-    "default": {
-        "BACKEND": "storages.backends.s3boto3.S3StaticStorage"
-    },
+    # "default": {
+    #     "BACKEND": "storages.backends.s3boto3.S3StaticStorage"
+    # },
 
-    # CSS and JS file management
+    # # CSS and JS file management
+    # "staticfiles": {
+    #     "BACKEND": "storages.backends.s3boto3.S3StaticStorage"
+    # }
+
+    # WHITENOISE STATIC FILE CONFIG
+
     "staticfiles": {
-        "BACKEND": "storages.backends.s3boto3.S3StaticStorage"
-    }
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
 }
