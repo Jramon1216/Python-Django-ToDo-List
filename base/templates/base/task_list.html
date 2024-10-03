@@ -1,6 +1,6 @@
 {% extends 'base/main.html' %} 
-
 {% block content %}
+{% load svg %}
 
 <!-- HEADER -->
 <div class="header-div">
@@ -34,9 +34,9 @@
     />
     <input class="button" type="submit" value="Search" />
   </form>
-  {% if tasks|length > 0 %}
-    <a class="fa-light fa-plus" id="add-link" href="{% url 'task-create' %}"></a>
-  {% endif %}
+    <a href="{% url 'task-create' %}">
+      <svg height='30px' width='30px'>{% svg 'plus' %}</svg>
+    </a>
 </div>
 
 
@@ -47,7 +47,7 @@
     {% if task.complete %}
 
     <div class="task-title">
-      <i class="fa-solid fa-circle-check"></i>
+       <svg height='15px' width='15px'>{% svg 'circle-check' %}</svg>
       <i><s><a href="{% url 'task-update' task.id %}">{{task}}</a></s></i>
     </div>
     <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
@@ -55,22 +55,20 @@
     {% else %}
     
     <div class="task-title">
-      <div class="fa-regular fa-circle"></div>
+      <svg height='15px' width='15px'> {% svg 'circle'%} </svg>
       <a href="{% url 'task-update' task.id %}">{{task}}</a>
     </div>
     <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
     
     {%endif%}
   </div>
+  {% empty %}
+  <div>
+      <h4 style="margin: 0 20px;">You have no tasks today <br>
+      <a href="{% url 'task-create' %}"> Click here to create a new task</a></h4>
+  </div>
   {% endfor %}
 </div>
 
 {% endblock content %} 
 
-{% block scripts %}
-<!-- <script>
-    const data = '{{tasks_json}}'
-    cleanData = JSON.parse(data.replace(/&quot;/g, '"'))
-    console.log(cleanData)
-</script> -->
-{% endblock scripts %}
