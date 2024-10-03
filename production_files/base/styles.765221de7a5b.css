@@ -1,0 +1,140 @@
+body {
+    background-color: #fafafa;
+    padding-top: 60px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+a, p {
+    color: #4b5156;
+} 
+
+h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    max-width: 550px;
+    margin: auto; 
+    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    
+}
+
+.header-div {
+    justify-content: space-between;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(#EEA390 0%, #EB796F 43%, #EB796F 100%);
+}
+
+.header-div a {
+    color: rgb(247, 247, 247);
+    text-decoration: none;
+}
+
+.welcome-msg {
+    margin: 0;    
+    width:290px;
+}
+
+.task-count {
+    margin: 0px;
+    width: 256px;
+}
+
+.task-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid rgb(226, 226, 226);
+}
+
+.task-title{
+    display: flex;
+}
+
+.task-title a {
+    text-decoration: none;
+    color: #4b5156;
+    margin-left: 10px;
+}
+
+button {
+    border: none; 
+    text-decoration: none;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+button:hover{
+    cursor: pointer;  
+ }
+
+.logout, form {
+    width: 59px;
+}
+
+.errorlist li {
+    width: 500px;
+}
+
+#search-add-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.add-link{
+    color: #EB796F;
+    text-decoration: none;
+    font-size: 42px;
+    text-shadow: 1px 1px #81413b;
+    stroke: #EB796F;
+}
+
+.delete-link {
+    text-decoration: none;
+    font-weight: 900;
+    color: #cf4949;
+    font-size: 22px;
+    line-height: 0;
+}
+
+input[type=text],
+input[type=password],
+textarea {
+    border: 1px solid #EB796F;
+    border-radius: 5px;
+    padding: 10px;
+} 
+
+label{
+    padding-top: 10px !important;
+    display: block;
+}
+
+.button {
+    border: 1px solid #EB796F;
+    background-color: #fafafa;
+    color: #EB796F;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+::placeholder {
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+.card-body {
+    padding: 20px;
+}
