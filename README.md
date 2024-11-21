@@ -1,8 +1,12 @@
-# Python Django ToDo List w/ Authentication
+# Static Web Page with Django Class-Based Views w/ Authentication
 
-This project is a pure python django project that I made following along with this [tutorial](https://www.youtube.com/watch?v=llbtoQTt4qw "tutorial").
+This project is a pure Python Django project that I made following along with this [tutorial](https://www.youtube.com/watch?v=llbtoQTt4qw "tutorial").
 
-This was my first exposure to using class based views and Django Template Language to create a static web page. There were some things that I did differently from the tutorial and some planned features to deepen my understanding of using django.
+This project marked my first foray into using class-based views and the Django Template Language to develop a static web page. Unlike the tutorial, I implemented several features differently to deepen my understanding of Django's capabilities.
+------------
+## Key Highlights:
+**Class-Based Views**: Leveraged the power of Django's class-based views to streamline and organize the codebase.
+**Django Template** Language (DTL): Employed DTL to create a dynamic and efficient template system.
 
 ------------
 
